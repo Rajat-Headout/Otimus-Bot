@@ -224,7 +224,6 @@ def download_images_from_channel(channel_id, time_from):
                                     booking_id, itinerary_id, trace_token = parse_filename(original_filename)
                                     csv_data.append([jpeg_filename, booking_id, itinerary_id, trace_token])
         
-        Write CSV file
         with open('images_data.csv', 'w', newline='') as csvfile:
             csv_writer = csv.writer(csvfile)
             csv_writer.writerow(["image_path", "booking_id", "itinerary_id", "trace_token"])
